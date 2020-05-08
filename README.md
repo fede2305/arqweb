@@ -1,7 +1,7 @@
 ###ABM de Reglas de Firewall
-##Sistema de pedido de reglas de usuario empresarial para el area de seguridad
+##Sistema de pedido de reglas de firewall empresarial para el area de seguridad
 
-La idea es crear un sistema que permita a usuarios comunes pedir el Alta Baja o Modificacion de una regla. Y que usuarios Admin, puedan aprobar y dar un workflow de la misma. Las reglas, tendrian, origen,destino,servicio,sede, y ambiente y una fecha de expiracion.
+La idea es crear un sistema que permita a usuarios comunes pedir el Alta Baja o Modificacion de una regla de firewall. Y que usuarios Admin, puedan aprobar y dar un workflow de la misma. Las reglas, tendrian, origen,destino,servicio,sede, y ambiente y una fecha de expiracion.
 
 #Endpoints:
 
