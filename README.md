@@ -10,3 +10,4 @@ Las reglas, tendrian, origen,destino,sede, y ID.
 #URL  /api/reglas/
 #URL  /api/reglas/id
 ```
+Federico del Franco - Arquitectura Web
