@@ -33,19 +33,19 @@ exports.create = function(req, res) {
     newregla.id = contador;
     reglas["regla" + contador] = newregla;
     contador = contador + 1;
-    console.log("--->After Post, reglas:\n" + JSON.stringify(reglas, null, 4));
-    res.end("Post Successfully: \n" + JSON.stringify(newregla, null, 4));
+    console.log("---> Reglas:\n" + JSON.stringify(reglas, null, 4));
+    res.end("Regla creada satisfactoriamente: \n" + JSON.stringify(newregla, null, 4));
 };
 
 exports.findAll = function(req, res) {
     console.log("--->Find All: \n" + JSON.stringify(reglas, null, 4));
-    res.end("All reglas: \n" + JSON.stringify(reglas, null, 4));
+    res.end("Todas las reglas: \n" + JSON.stringify(reglas, null, 4));
 };
 
 exports.findOne = function(req, res) {
     var regla = reglas["regla" + req.params.id];
-    console.log("--->Find regla: \n" + JSON.stringify(regla, null, 4));
-    res.end( "Find a regla:\n" + JSON.stringify(regla, null, 4));
+    console.log("--->Buscar regla: \n" + JSON.stringify(regla, null, 4));
+    res.end( "Buscar regla:\n" + JSON.stringify(regla, null, 4));
 };
 
 exports.update = function(req, res) {
@@ -55,18 +55,18 @@ exports.update = function(req, res) {
         // update data
         reglas["regla" + id] = updatedregla;
 
-        console.log("--->Update Successfully, reglas: \n" + JSON.stringify(reglas, null, 4))
+        console.log("--->Actualización completada, reglas: \n" + JSON.stringify(reglas, null, 4))
 
         // return
-        res.end("Update Successfully! \n" + JSON.stringify(updatedregla, null, 4));
+        res.end("Actualización Completada! \n" + JSON.stringify(updatedregla, null, 4));
     }else{
-        res.end("Don't Exist regla:\n:" + JSON.stringify(updatedregla, null, 4));
+        res.end("No existe la regla:\n:" + JSON.stringify(updatedregla, null, 4));
     }
 };
 
 exports.delete = function(req, res) {
     var deleteregla = reglas["regla" + req.params.id];
     delete reglas["regla" + req.params.id];
-    console.log("--->After deletion, regla list:\n" + JSON.stringify(reglas, null, 4) );
-    res.end( "Deleted regla: \n" + JSON.stringify(deleteregla, null, 4));
+    console.log("--->Regla eliminada:\n" + JSON.stringify(reglas, null, 4) );
+    res.end( "Regla eliminada: \n" + JSON.stringify(deleteregla, null, 4));
 };
